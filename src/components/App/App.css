@@ -1,6 +1,7 @@
 :root {
 	--color-blue: #3199dc;
 	--color-dark: #222222;
+	--color-light: #f0ebeb;
 }
 
 *, ::after, ::before {
