@@ -4,6 +4,7 @@ import { ROOT_INDEX } from '../../constans/root';
 import Error from '../Error/Error';
 
 import './Comics.css'
+import Characters from '../Characters/Characters';
 
 class Comics {
 
@@ -38,7 +39,7 @@ class Comics {
 			const url = element.getAttribute('data-url')
 
 			element.addEventListener('click', () => {
-				console.log(url)
+				Characters.render(url)
 			})
 		})
 	}

@@ -14,7 +14,6 @@ class GetDataApi {
 
 			return response.data.data.results;
 		} catch (error) {
-			console.log(error);
 			return false
 		}
 	}
