@@ -1,22 +1,13 @@
 import { getDataApi } from '../../utils/getDataApi';
 import { API_URL, URL_CHARACTERS, URL_COMICS } from '../../constans/api';
 import { ROOT_INDEX } from '../../constans/root';
+import Error from '../Error/Error';
 
 import './Comics.css'
 
 class Comics {
 
-	openCharacter() {
-		document.querySelectorAll('.comics__item').forEach(element => {
-			const url = element.getAttribute('data-url')
-
-			element.addEventListener('click', () => {
-				console.log(url)
-			})
-		})
-	}
-	async render() {
-		const data = await getDataApi.getDate(API_URL + URL_COMICS);
+	renderComics(data) {
 		let htmlCard = '';
 
 		const comics = data.map(({id, title, thumbnail: {extension, path}}) => {
@@ -40,6 +31,23 @@ class Comics {
 				${htmlCard}
 			</ul>
 		`;
+	}
+
+	openCharacter() {
+		document.querySelectorAll('.comics__item').forEach(element => {
+			const url = element.getAttribute('data-url')
+
+			element.addEventListener('click', () => {
+				console.log(url)
+			})
+		})
+	}
+
+	async render() {
+		const data = await getDataApi.getDate(API_URL + URL_COMICS);
+
+		data ? this.renderComics(data) : Error.render()
+
 	}
 }
 
