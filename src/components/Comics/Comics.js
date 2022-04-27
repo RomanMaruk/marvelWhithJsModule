@@ -5,6 +5,7 @@ import Error from '../Error/Error';
 
 import './Comics.css'
 import Characters from '../Characters/Characters';
+import Spinner from '../Spinner/Spinner';
 
 class Comics {
 
@@ -39,6 +40,7 @@ class Comics {
 			const url = element.getAttribute('data-url')
 
 			element.addEventListener('click', () => {
+				Spinner.render()
 				Characters.render(url)
 			})
 		})
