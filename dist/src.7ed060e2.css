@@ -1,0 +1,156 @@
+.container__error {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 75vh;
+}
+.error__text {
+	margin: 0;
+	padding: 0;
+	color: var(--color-light);
+}
+.comics-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 35px;
+	max-width: 1200px;
+	margin: 30px auto;
+	justify-content: center;
+}
+.comics__item {
+	background-color: var(--color-light);
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: .5;
+}
+.comics__item:hover {
+	transform: rotate(-3deg) scale(0.95);
+	filter: saturate(150%);
+}
+.comics__name {
+	display: flex;
+	margin: auto;
+	padding: 10px;
+}
+.wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	backdrop-filter: blur(3px);
+}
+.characters__container {
+	margin: auto;
+	padding: 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	max-width: 900px;
+	width: 80%;
+	height: 600px;
+	background-color: var(--color-light);
+	overflow: auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+.characters__container .text {
+	position: relative;
+}
+.characters__item{
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	width: 200px;
+	height: 250px;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center; 
+	box-shadow: 0 2px 15px rgba(168, 175, 196, 0.5);
+}
+.characters__name{
+	padding: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 0.9rem;
+}
+.characters-close {
+	cursor: pointer;
+	height: 25px;
+	width: 30px;
+	border: none;
+	background-color: inherit;
+	position: absolute;
+	right: 35px;
+}
+.btn-cross {
+	font-size: 35px;
+	color: #fff;
+}
+.characters__text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container-spinner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	backdrop-filter: blur(2px);
+}
+:root {
+	--color-blue: #3199dc;
+	--color-dark: #222222;
+	--color-light: #f0ebeb;
+}
+
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--color-dark);
+	font-size: 16px;
+	line-height: 1.7;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+	scrollbar-color: var(--color-blue) var(--color-dark);
+	scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: var(--color-blue);
+	border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+	background-color: var(--color-dark);
+}
+
+
+/*# sourceMappingURL=/src.7ed060e2.css.map */
